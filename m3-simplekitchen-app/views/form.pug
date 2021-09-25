@@ -1,33 +1,43 @@
 extends layout
 
 block content
-    -data = data || {}
+    head
+        link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(rel='StyleSheet' href='css/styles.css' type='text/css')
+        
+        -data = data || {}
 
-    if errors
-        ul.my-errors
-        for error in errors
-            li= error.msg
-    form(action="." method="POST" class="form-registration")
-        label(for="name") Name:
-        input(
-            type="text"
-            id="name"
-            name="name"
-            class="form-control"
-            value=data.name
-        )
+        if errors
+            ul.my-errors
+                for error in errors
+                    li= error.msg
 
-        label(for="email") Email:
-        input(
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            value=data.email
-        )
+        h3 Register to subscribe
+        form(action="." method="POST" class="form-registration")
+            div.name
+                label(for="name") Name:
+                input(
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    value=data.name
+                )
 
-        input(
-            type="submit" 
-            value="Submit"
-            class="btn btn-lg btn-primary btn-block"
-        )
+            div.email
+                label(for="email") Email:
+                input(
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    value=data.email
+                )
+
+            div.submit
+                input(
+                    type="submit" 
+                    value="Register"
+                    class="btn btn-lg btn-primary btn-block"
+                )

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    head
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        link(rel='StyleSheet' href='css/form.css' type='text/css')
+    body.registrations-background
+        if registrations.length
+            table.listing-table
+                tr
+                    th Name
+                    th Email
+                each registration in registrations
+                    tr
+                        td= registration.name
+                        td= registration.email
+        else
+            p No registrations yet :(

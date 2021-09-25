@@ -61,6 +61,69 @@ main {
         font-size: 2em;
       }
     }
+
+    // form
+    #register {
+      padding: 15px;
+      margin: 0 auto;
+      h3{
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      .name, .email, .submit {
+        display: flex;
+        flex-direction: column;
+        width: 27%;
+        padding-left: 217px;
+        padding-bottom: 20px;
+      }
+      .name {
+        input {
+          height: 25px;
+        }
+      }
+      .email {
+        input {
+          height: 25px;
+        }
+      }
+      .submit {
+        input {
+          background-color: $backgroundColor1;
+          color: $mainColor;
+          border: none;
+          padding: 10px 5px;
+        }
+      }
+      .my-errors {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        color: #333;
+        font-size: 1.2rem;
+        display: table;
+        li {
+          list-style-type: none;
+          text-align: center;
+          font-size: 1.1rem;
+          margin: 0 0 1rem;
+        }
+        li:before {
+          content: "! Error : ";
+          color: #f00;
+          font-weight: bold;
+        }
+      }
+    }
+
+    #thank-you {
+      h3 {
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
 }
 
 footer {
