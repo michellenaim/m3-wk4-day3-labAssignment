@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "nodemon ./start.js",
     "lite": "lite-server",
-    "scss": "node-sass -o css/ scss/",
+    "scss": "node-sass -o public/css/ public/scss/",
     "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:scss": "onchange 'css/*.scss' -- npm run scss",
@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

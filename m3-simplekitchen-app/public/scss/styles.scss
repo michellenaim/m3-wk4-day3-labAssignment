@@ -72,7 +72,7 @@ main {
         text-align: center;
         padding-bottom: 20px;
       }
-      .name, .email, .submit {
+      .name, .email, .username, .password, .submit {
         display: flex;
         flex-direction: column;
         width: 27%;
@@ -85,6 +85,16 @@ main {
         }
       }
       .email {
+        input {
+          height: 25px;
+        }
+      }
+      .username {
+        input {
+          height: 25px;
+        }
+      }
+      .password {
         input {
           height: 25px;
         }

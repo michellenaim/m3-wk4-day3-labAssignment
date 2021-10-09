@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const auth = require('http-auth');
+const bcrypt = require('bcrypt');
+
 const { check, validationResult } = require('express-validator');
 
 const router = express.Router();
@@ -38,12 +40,22 @@ router.post('/',
         check('email')
         .isLength({ min: 1 })
         .withMessage('Please enter an email'),
+        check('username')
+        .isLength({ min: 1 })
+        .withMessage('Please enter a username'),
+        check('password')
+        .isLength({ min: 1 })
+        .withMessage('Please enter a password'),
     ],
-    (req, res) => {
+    async (req, res) => {
         //console.log(req.body);
         const errors = validationResult(req);
         if (errors.isEmpty()) {
           const registration = new Registration(req.body);
+          
+          const salt = await bcrypt.genSalt(10);
+          registration.password = await bcrypt.hash(registration.password, salt);
+
           registration.save()
             .then(() => {res.render('thankyou', { title: 'Thank You Page' });})
             .catch((err) => {

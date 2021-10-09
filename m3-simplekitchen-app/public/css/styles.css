@@ -1,147 +1,120 @@
-/* Nesting */
 /* SCSS */
 nav {
   font-size: 1em;
   font-font-weight: bold;
-  float: left;
-}
-nav ul {
-  list-style-type: none;
-}
-nav ul li {
-  float: left;
-  margin: 0 5px 0 0;
-  color: white;
-}
-nav ul li a {
-  text-decoration: none;
-  color: white;
-}
-nav ul li a:hover {
-  text-decoration: underline;
-}
+  float: left; }
+  nav ul {
+    list-style-type: none; }
+    nav ul li {
+      float: left;
+      margin: 0 5px 0 0;
+      color: white; }
+      nav ul li a {
+        text-decoration: none;
+        color: white; }
+        nav ul li a:hover {
+          text-decoration: underline; }
 
 .register {
-  margin-left: 70rem;
-}
+  margin-left: 70rem; }
 
 /* Variables */
 html {
   font-size: 1em;
-  width: 100%;
-}
+  width: 100%; }
 
 body {
   font-family: Arial, Helvetica, Sans-Serif;
-  background: #daaa0e;
-}
+  background: #daaa0e; }
 
 header {
   height: 50px;
   width: 1350px;
-  margin: 0.8em auto 1em auto;
-}
+  margin: 0.8em auto 1em auto; }
 
 main {
   background: white;
   width: 1350px;
   min-height: 535px;
   padding: 1.5%;
-  margin: 0 auto;
-}
-main #intro-image {
-  float: left;
-  width: 800px;
-}
-main #intro-image img {
-  width: 800px;
-}
-main #intro-text {
-  width: 550px;
-  height: 407px;
-  float: left;
-  background: #d4d5d8;
-  text-align: center;
-  padding-top: 8em;
-}
-main #intro-text h3 {
-  font-size: 2em;
-  color: #313130;
-}
-main #intro-text span {
-  font-family: "Sacramento", cursive;
-  font-size: 2em;
-}
-main #register {
-  padding: 15px;
-  margin: 0 auto;
-}
-main #register h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  padding-bottom: 20px;
-}
-main #register .name, main #register .email, main #register .submit {
-  display: flex;
-  flex-direction: column;
-  width: 27%;
-  padding-left: 217px;
-  padding-bottom: 20px;
-}
-main #register .name input {
-  height: 25px;
-}
-main #register .email input {
-  height: 25px;
-}
-main #register .submit input {
-  background-color: #daaa0e;
-  color: white;
-  border: none;
-  padding: 10px 5px;
-}
-main #register .my-errors {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  color: #333;
-  font-size: 1.2rem;
-  display: table;
-}
-main #register .my-errors li {
-  list-style-type: none;
-  text-align: center;
-  font-size: 1.1rem;
-  margin: 0 0 1rem;
-}
-main #register .my-errors li:before {
-  content: "! Error : ";
-  color: #f00;
-  font-weight: bold;
-}
-main #thank-you h3 {
-  text-align: center;
-  font-size: 2rem;
-}
+  margin: 0 auto; }
+  main #intro-image {
+    float: left;
+    width: 800px; }
+    main #intro-image img {
+      width: 800px; }
+  main #intro-text {
+    width: 550px;
+    height: 407px;
+    float: left;
+    background: #d4d5d8;
+    text-align: center;
+    padding-top: 8em; }
+    main #intro-text h3 {
+      font-size: 2em;
+      color: #313130; }
+    main #intro-text span {
+      font-family: "Sacramento", cursive;
+      font-size: 2em; }
+  main #register {
+    padding: 15px;
+    margin: 0 auto; }
+    main #register h3 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 20px; }
+    main #register .name, main #register .email, main #register .username, main #register .password, main #register .submit {
+      display: flex;
+      flex-direction: column;
+      width: 27%;
+      padding-left: 217px;
+      padding-bottom: 20px; }
+    main #register .name input {
+      height: 25px; }
+    main #register .email input {
+      height: 25px; }
+    main #register .username input {
+      height: 25px; }
+    main #register .password input {
+      height: 25px; }
+    main #register .submit input {
+      background-color: #daaa0e;
+      color: white;
+      border: none;
+      padding: 10px 5px; }
+    main #register .my-errors {
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      color: #333;
+      font-size: 1.2rem;
+      display: table; }
+      main #register .my-errors li {
+        list-style-type: none;
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 0 0 1rem; }
+      main #register .my-errors li:before {
+        content: "! Error : ";
+        color: #f00;
+        font-weight: bold; }
+  main #thank-you h3 {
+    text-align: center;
+    font-size: 2rem; }
 
 footer {
   width: 1350px;
   margin: 2em auto;
   padding-left: 80px;
-  font-size: 0.85em;
-}
+  font-size: 0.85em; }
 
 button, .submit-buttton {
   color: white;
   width: 100px;
   height: 40px;
   background: #daaa0e;
-  margin-top: 2em;
-}
+  margin-top: 2em; }
 
 .submit-buttton {
-  border: 1px #313130;
-}
-
-/*# sourceMappingURL=styles.css.map */
+  border: 1px #313130; }
